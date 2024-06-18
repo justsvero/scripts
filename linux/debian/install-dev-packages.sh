@@ -6,6 +6,3 @@ apt install -y build-essential gcc-12-locales binutils-doc make-doc gcc-doc \
 	flex-doc bison bison-doc m4-doc autoconf autoconf-doc automake \
 	libtool libtool-doc glibc-doc-reference doc-base debian-keyring \
 	manpages-dev manpages-de-dev openjdk-17-{doc,jdk,source}
-
-# Geany IDE
-apt install -y geany

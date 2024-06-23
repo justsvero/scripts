@@ -8,6 +8,3 @@ dnf install -y gcc-gfortran gcc-gm2 nasm nasm-doc
 
 # Additional build tools
 dnf install -y cmake ninja-build
-
-# Development (Java)
-dnf install -y java-21-openjdk-devel java-21-openjdk-javadoc java-21-openjdk-src

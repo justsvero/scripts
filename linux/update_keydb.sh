@@ -1,6 +1,8 @@
 #!/usr/bin/sh
 
 UNZIP=$(which unzip)
+TARGET=$HOME/.config/aacs/KEYDB.cfg
+BACKUP=$TARGET.backup_$(date +%Y%m%d)
 
 if [ "$UNZIP" = "" -o ! -x $UNZIP ]; then
 	echo "unzip is required but was not found"
@@ -16,6 +18,11 @@ wget 'http://fvonline-db.bplaced.net/fv_download.php?lang=deu' -O /tmp/keydb_deu
 
 if [ -f /tmp/keydb_deu.zip ]; then
 	unzip /tmp/keydb_deu.zip keydb.cfg -d /tmp
-	mv /tmp/keydb.cfg ~/.config/aacs/KEYDB.cfg
+
+	if [ -f $TARGET ]; then
+		mv $TARGET $BACKUP
+	fi
+
+	mv /tmp/keydb.cfg $TARGET
 	rm /tmp/keydb_deu.zip
 fi

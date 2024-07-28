@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
-if [[ ! -d /etc/apt/keyrings ]] ; then
+if [ ! -d /etc/apt/keyrings ]; then
 	install -d -m 0755 /etc/apt/keyrings
 fi
 

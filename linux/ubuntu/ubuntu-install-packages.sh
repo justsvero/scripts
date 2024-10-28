@@ -14,7 +14,7 @@ apt dist-upgrade -y
 # Basics
 apt install -y vim vim-doc vim-scripts exuberant-ctags keepassxc \
 	curl w3m ncftp mc arj rar unrar tmux dict apt-file \
-	wl-clipboard xsel
+	wl-clipboard xsel pwgen pass
 
 apt-file update
 

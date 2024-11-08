@@ -7,8 +7,8 @@ dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 # Install mp3 encoder
 dnf install -y lame* --exclude=lame-devel
 
-# Install/Upgrade multimedia package group
-dnf group upgrade -y --with-optional --allowerasing Multimedia
+# Install multimedia package group (TODO: for some reason dnf5 does not find this group)
+dnf4 group install -y --with-optional --allowerasing Multimedia
 
 # Install some multimedia apps
-dnf install --allowerasing -y moc mplayer vlc ffmpeg
+dnf install --allowerasing -y mplayer mplayer-doc vlc ffmpeg

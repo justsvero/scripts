@@ -7,6 +7,7 @@ apt install -y keepassxc kpcli tmux git git-doc vim \
 	hunspell-de-at-frami hunspell-de-ch-frami \
 	hunspell-de-de-frami hunspell-en-au hunspell-en-ca \
 	hunspell-en-gb hunspell-en-us hunspell-en-za pwgen \
-	dos2unix mtools bat neofetch htop apt-file pass
+	dos2unix mtools bat lfm neofetch htop btop apt-file \
+	pass
 
 apt-file update

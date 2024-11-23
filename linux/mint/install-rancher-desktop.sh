@@ -8,4 +8,6 @@ echo 'deb [signed-by=/usr/share/keyrings/isv-rancher-stable-archive-keyring.gpg]
 apt update
 
 # Install SUSE Rancher Desktop
-apt install rancher-desktop
+echo '#########################################################################'
+echo 'Run "apt install rancher-desktop" as root to install SUSE Rancher Desktop'
+echo '#########################################################################'

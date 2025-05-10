@@ -7,7 +7,7 @@ if [[ "$GCC" == "" || ! -x "$GCC" ]] ; then
 fi
 
 # Install the building tool package
-apt install -y libdvd-pkg libdvdread8 libdvdnav4 libdvdnav-doc
+apt install -y libdvd-pkg libdvdread8 libdvdnav4 libdvdnav-doc dvd+rw-tools
 
 # Compile and install the libdvdcss
 dpkg-reconfigure libdvd-pkg

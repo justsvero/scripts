@@ -8,7 +8,7 @@ apt install -y keepassxc kpcli tmux git git-doc vim \
 		hunspell-de-de-frami hunspell-en-au hunspell-en-ca \
 		hunspell-en-gb hunspell-en-us hunspell-en-za pwgen \
 		dos2unix mtools bat neofetch htop btop apt-file \
-		pass whois lfm
+		pass whois lfm tree
 
 		echo '#################################################################'
 		echo 'Please run "apt-file update" as root to update the local database'

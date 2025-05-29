@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-apt install \
+apt install -y \
 	fpc \
 	libx11-doc \
 	libxcb-doc \

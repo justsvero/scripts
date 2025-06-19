@@ -22,4 +22,5 @@ apt install -y \
 	flex \
 	flex-doc \
 	cmake \
-	cmake-doc
+	cmake-doc \
+	meld

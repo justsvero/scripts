@@ -23,4 +23,6 @@ apt install -y \
 	flex-doc \
 	cmake \
 	cmake-doc \
-	meld
+	meld \
+	libncurses-dev \
+	ncurses-doc

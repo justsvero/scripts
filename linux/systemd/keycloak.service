@@ -1,0 +1,22 @@
+[Unit]
+Description=Keyloak IAM
+Wants=network-online.target mariadb.service
+After=network-online.target mariadb.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=keycloak
+Group=keycloak
+Environment=JAVA_HOME=/opt/openjdk/jdk-21.0.8-lite
+WorkingDirectory=/opt/keycloak/keycloak-26.3.2/bin
+ExecStart=/opt/keycloak/keycloak-26.3.2/bin/kc.sh start
+SuccessExitStatus=0 143
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=2
+KillSignal=SIGTERM
+KillMode=process
+SendSIGKILL=no

@@ -1,7 +1,8 @@
 @ECHO OFF
 
-streams64 -nobanner -s -d %USERPROFILE%\Documents\
-streams64 -nobanner -s -d %USERPROFILE%\Downloads\
-streams64 -nobanner -s -d %USERPROFILE%\Music\
-streams64 -nobanner -s -d %USERPROFILE%\Pictures\
-streams64 -nobanner -s -d %USERPROFILE%\Videos\
+streams64 -s -d -nobanner %USERPROFILE%\Books
+streams64 -s -d -nobanner %USERPROFILE%\Documents
+streams64 -s -d -nobanner %USERPROFILE%\Downloads
+streams64 -s -d -nobanner %USERPROFILE%\Music
+streams64 -s -d -nobanner %USERPROFILE%\Pictures
+streams64 -s -d -nobanner %USERPROFILE%\Videos

@@ -25,4 +25,12 @@ apt install -y \
 	cmake-doc \
 	meld \
 	libncurses-dev \
-	ncurses-doc
+	ncurses-doc \
+	libglut-dev
+
+if [ -f /usr/lib/x86_64-linux-gnu/libglut.so.3.12 ]; then
+	pushd /usr/lib/x86_64-linux-gnu
+	ln -s libglut.so.3.12 libglut.so.3
+	echo "Symbolic link created"
+	popd
+fi

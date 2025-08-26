@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-# Java 21
-apt install -y openjdk-21-{doc,jdk,source}
+# Java 17 & 21
+apt install -y openjdk-{17,21}-{doc,jdk,source}

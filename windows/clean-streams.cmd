@@ -1,6 +1,6 @@
 @ECHO OFF
 
-streams64 -s -d -nobanner %USERPROFILE%\Books
+REM streams64 -s -d -nobanner %USERPROFILE%\Books
 streams64 -s -d -nobanner %USERPROFILE%\Documents
 streams64 -s -d -nobanner %USERPROFILE%\Downloads
 streams64 -s -d -nobanner %USERPROFILE%\Music

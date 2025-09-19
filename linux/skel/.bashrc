@@ -119,3 +119,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Sets the default permission mask
+umask 0022

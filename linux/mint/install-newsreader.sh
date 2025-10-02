@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-apt install -y tin slrn leafnode
+apt install -y leafnode tin slrn slrnface libcompfaceg1-dev

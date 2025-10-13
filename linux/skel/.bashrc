@@ -2,9 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# sets the default permission mask
-umask 0022
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -96,6 +93,11 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -la'
+
+# more aliases
+alias fix-permissions='find . -mindepth 1 -type d -exec chmod 0755 {} \; && find . -type f -exec chmod 0644 {} \; && find . -type f -name "*.sh" -exec chmod 0755 {} \;'
+alias fix-scripts='find . -type f -name "*.sh" -exec chmod 0755 {} \;'
+alias sync-folder='rsync -ahvs --no-p --update --delete --stats'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

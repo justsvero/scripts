@@ -8,6 +8,12 @@ case $- in
       *) return;;
 esac
 
+# Show a greeting if possible
+FIGLET=$(which figlet)
+if [ "$FIGLET" != "" -a -x "$FIGLET" ]; then
+	$FIGLET 'Hallo!'
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -127,3 +133,4 @@ fi
 
 # Sets the default permission mask
 umask 0022
+

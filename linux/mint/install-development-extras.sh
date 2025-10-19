@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 # Additional GCC programming language support
 apt install -y gfortran gfortran-doc gnat gnat-doc gobjc gobjc++
 

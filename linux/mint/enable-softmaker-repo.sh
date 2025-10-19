@@ -1,5 +1,10 @@
 #!/usr/bin/sh
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 if [ ! -d /etc/apt/keyrings ]; then
 	install -d -m 0755 /etc/apt/keyrings
 fi

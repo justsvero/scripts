@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 # Development - General
 apt install -y binutils-doc make-doc gcc-doc glibc-doc manpages-dev manpages-de-dev gfortran gfortran-doc \
 	strace libstdc++-12-doc bison bison-doc flex flex-doc libtool libtool-doc gdb-doc autoconf autoconf-doc \

@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 # Import sign key
 wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
 

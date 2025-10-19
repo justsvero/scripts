@@ -1,5 +1,10 @@
 #!/usr/bin/sh
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 # Add Docker's official GPG key:
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc

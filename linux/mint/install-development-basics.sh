@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [ "$UID" != "0" ]; then
+	echo "You need to run this script as root"
+	exit 1
+fi
+
 # GNU C/C++ and Assembler plus Tools
 apt install -y \
 	build-essential \

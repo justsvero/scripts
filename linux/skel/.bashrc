@@ -2,14 +2,17 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# sets the default permission mask
-umask 0022
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
+
+# Show a greeting if possible
+FIGLET=$(which figlet)
+if [ "$FIGLET" != "" -a -x "$FIGLET" ]; then
+	$FIGLET 'Hallo!'
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -97,6 +100,11 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -la'
 
+# more aliases
+alias fix-permissions='find . -mindepth 1 -type d -exec chmod 0755 {} \; && find . -type f -exec chmod 0644 {} \; && find . -type f -name "*.sh" -exec chmod 0755 {} \;'
+alias fix-scripts='find . -type f -name "*.sh" -exec chmod 0755 {} \;'
+alias sync-folder='rsync -ahvs --no-p --update --delete --stats'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -108,6 +116,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Functions
+provides() { apt-cache showpkg $1 | awk '/Pa/, /Reverse P/ {next} {print $1 | "sort -u"}'; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -122,3 +133,4 @@ fi
 
 # Sets the default permission mask
 umask 0022
+

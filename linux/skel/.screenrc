@@ -10,5 +10,14 @@ vbell off # turn off visual bell
 defutf8 on # UTF-8 is on by default
 deflogin on
 
+# Redefine escape key
+escape ^Bb
+
+# Start window numbers with 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+
 #defshell -/bin/bash # Default shell is bash (login mode)
 defshell /bin/bash

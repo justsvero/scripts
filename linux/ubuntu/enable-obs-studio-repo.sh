@@ -1,0 +1,3 @@
+#!/bin/sh
+
+add-apt-repository ppa:obsproject/obs-studio

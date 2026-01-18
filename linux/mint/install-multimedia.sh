@@ -5,5 +5,4 @@ if [ "$UID" != "0" ]; then
 	exit 1
 fi
 
-apt install -y mint-meta-codecs ffmpeg ffmpeg-doc mplayer mplayer-doc \
-	moc moc-ffmpeg-plugin vlc cheese brasero sound-juicer
+apt install -y mint-meta-codecs ffmpeg ffmpeg-doc vlc cheese brasero sound-juicer

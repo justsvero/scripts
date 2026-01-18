@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [ "$UID" != "0" ]; then
+if [[ "$UID" != "0" ]]; then
 	echo "You need to run this script as root"
 	exit 1
 fi
@@ -31,7 +31,23 @@ apt install -y \
 	meld \
 	libncurses-dev \
 	ncurses-doc \
-	libglut-dev
+	libglut-dev \
+	clang \
+	lldb \
+	clang-18-doc \
+	llvm-18-doc \
+	gfortran \
+	gfortran-doc \
+	gnat \
+	gnat-doc \
+	gobjc \
+	gobjc++ \
+	ninja-build \
+	sqlite3 \
+	sqlite3-doc \
+	sqlite3-tools \
+	libsqlite3-dev \
+	subversion
 
 if [ -f /usr/lib/x86_64-linux-gnu/libglut.so.3.12 ]; then
 	pushd /usr/lib/x86_64-linux-gnu
@@ -39,3 +55,15 @@ if [ -f /usr/lib/x86_64-linux-gnu/libglut.so.3.12 ]; then
 	echo "Symbolic link created"
 	popd
 fi
+
+#######################################################################################
+
+read -p'' ANSWER
+
+if [[ "$ANSWER" == "y" || "$ANSWER" == "Y" ]]; then
+	apt install -y fpc libx11-doc libxcb-doc libxext-doc libxt-doc libwayland-doc
+fi
+
+unset $ANSWER
+
+#######################################################################################

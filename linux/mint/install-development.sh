@@ -28,6 +28,7 @@ apt install -y \
 	flex-doc \
 	cmake \
 	cmake-doc \
+	cmake-format \
 	meld \
 	libncurses-dev \
 	ncurses-doc \
@@ -58,7 +59,7 @@ fi
 
 #######################################################################################
 
-read -p'' ANSWER
+read -p'Install FreePascal? ' ANSWER
 
 if [[ "$ANSWER" == "y" || "$ANSWER" == "Y" ]]; then
 	apt install -y fpc libx11-doc libxcb-doc libxext-doc libxt-doc libwayland-doc

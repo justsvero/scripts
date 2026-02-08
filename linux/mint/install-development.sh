@@ -11,6 +11,7 @@ apt install -y \
 	binutils-doc \
 	make-doc \
 	gcc-doc \
+	gcc-13-locales \
 	glibc-doc \
 	glibc-doc-reference \
 	libstdc++-13-doc \

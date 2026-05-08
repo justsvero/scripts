@@ -1,0 +1,12 @@
+#cloud-init
+
+version: 2
+ethernets:
+  eth0:
+    addresses:
+    - 192.168.122.20/24
+    gateway4: 192.168.122.1
+    nameservers:
+      addresses:
+      - 192.168.122.1
+      - 9.9.9.9

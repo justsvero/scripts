@@ -1,12 +1,8 @@
 #!/usr/bin/sh
 
-dnf install akmod-nvidia \
-	xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs \
-	xorg-x11-drv-nvidia-power \
-	nvidia-vaapi-driver libva-utils vdpauinfo
+dnf install akmod-nvidia libva-nvidia-driver xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-power libva-utils vdpauinfo
 
 grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
-
 
 cat << EOF | tee /etc/dracut.conf.d/nvidia.conf
 add_drivers+=" nvidia nvidia_modeset nvidia_uvm nvidia_drm "

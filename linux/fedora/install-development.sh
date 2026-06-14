@@ -7,4 +7,4 @@ dnf install -y gcc gcc-c++ autoconf automake libtool bison flex make gdb gdb-doc
 dnf install -y clang lldb gcc-gfortran nasm nasm-doc
 
 # Additional tools
-dnf install -y cmake ninja-build meson httpie
+dnf install -y cmake ninja-build meson httpie tig xmlstarlet

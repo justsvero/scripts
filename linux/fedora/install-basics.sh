@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
-# General some essential tools
+# Install some basic tools
 dnf install -y vim-enhanced neovim fastfetch fastfetch-bash-completion keepassxc telnet ncftp w3m \
-	kpcli mc ImageMagick openssl htop btop links lynx unrar bat mtools dos2unix sharutils whois fzf
+	kpcli mc ImageMagick openssl htop btop links lynx unrar bat mtools dos2unix sharutils whois fzf \
+  zsh ksh tcsh aria2 screen

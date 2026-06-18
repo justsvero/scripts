@@ -2,7 +2,7 @@
 
 # Install multimedia codecs
 dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav \
-	--exclude=gstreamer1-plugins-bad-free-devel
+    --exclude=gstreamer1-plugins-bad-free-devel
 
 # Install mp3 encoder
 dnf install -y lame* --exclude=lame-devel

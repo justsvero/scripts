@@ -1,3 +1,0 @@
-[submodule "linux/skel/.config/tmux/plugins/tpm"]
-	path = linux/skel/.config/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git

@@ -133,4 +133,3 @@ fi
 
 # Sets the default permission mask
 umask 0022
-

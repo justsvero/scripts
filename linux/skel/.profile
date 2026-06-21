@@ -25,8 +25,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-# Java Development Environment
-export M2_HOME=$HOME/Development/apache-maven
-export JAVA_HOME=$HOME/Development/OpenJDK/jdk-21
-export PATH=$M2_HOME/bin:$PATH

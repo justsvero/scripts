@@ -1,6 +1,9 @@
 #!/usr/bin/sh
 
-dnf install akmod-nvidia libva-nvidia-driver xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-power libva-utils vdpauinfo
+dnf install -y akmod-nvidia-open libva-nvidia-driver xorg-x11-drv-nvidia-cuda \
+    xorg-x11-drv-nvidia-cuda-libs xorg-x11-drv-nvidia-power libva-utils vdpauinfo
+
+dnf mark user akmod-nvidia-open
 
 grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
 
@@ -14,7 +17,7 @@ options nvidia_drm modeset=1
 EOF
 
 while pgrep akmod; do
-	sleep 5
+    sleep 5
 done
 
 dracut --regenerate-all --force

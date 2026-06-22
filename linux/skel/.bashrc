@@ -133,3 +133,6 @@ fi
 
 # Sets the default permission mask
 umask 0022
+
+# Set the default URI for libvirt to the system
+export LIBVIRT_DEFAULT_URI=qemu:///system
